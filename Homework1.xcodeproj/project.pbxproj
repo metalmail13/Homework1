@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C36728BD1F7B3742003BB40B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C36728BC1F7B3742003BB40B /* main.m */; };
+		C36728C51F7B38C1003BB40B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C36728C41F7B38C1003BB40B /* Person.m */; };
+		C36728C81F7B3906003BB40B /* MDCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C36728C71F7B3906003BB40B /* MDCPerson.m */; };
+		C36728CB1F7B3921003BB40B /* MDCProfessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36728CA1F7B3921003BB40B /* MDCProfessor.m */; };
+		C36728CE1F7B393D003BB40B /* MDCStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = C36728CD1F7B393D003BB40B /* MDCStudent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		C36728B91F7B3742003BB40B /* Homework1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Homework1; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36728BC1F7B3742003BB40B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C36728C31F7B38C1003BB40B /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C36728C41F7B38C1003BB40B /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C36728C61F7B3906003BB40B /* MDCPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCPerson.h; sourceTree = "<group>"; };
+		C36728C71F7B3906003BB40B /* MDCPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCPerson.m; sourceTree = "<group>"; };
+		C36728C91F7B3921003BB40B /* MDCProfessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCProfessor.h; sourceTree = "<group>"; };
+		C36728CA1F7B3921003BB40B /* MDCProfessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCProfessor.m; sourceTree = "<group>"; };
+		C36728CC1F7B393D003BB40B /* MDCStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCStudent.h; sourceTree = "<group>"; };
+		C36728CD1F7B393D003BB40B /* MDCStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCStudent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				C36728BC1F7B3742003BB40B /* main.m */,
+				C36728C61F7B3906003BB40B /* MDCPerson.h */,
+				C36728C71F7B3906003BB40B /* MDCPerson.m */,
+				C36728C31F7B38C1003BB40B /* Person.h */,
+				C36728C41F7B38C1003BB40B /* Person.m */,
+				C36728C91F7B3921003BB40B /* MDCProfessor.h */,
+				C36728CA1F7B3921003BB40B /* MDCProfessor.m */,
+				C36728CC1F7B393D003BB40B /* MDCStudent.h */,
+				C36728CD1F7B393D003BB40B /* MDCStudent.m */,
 			);
 			path = Homework1;
 			sourceTree = "<group>";
@@ -119,6 +139,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36728CE1F7B393D003BB40B /* MDCStudent.m in Sources */,
+				C36728CB1F7B3921003BB40B /* MDCProfessor.m in Sources */,
+				C36728C81F7B3906003BB40B /* MDCPerson.m in Sources */,
+				C36728C51F7B38C1003BB40B /* Person.m in Sources */,
 				C36728BD1F7B3742003BB40B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
