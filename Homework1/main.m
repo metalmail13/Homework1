@@ -17,32 +17,20 @@ int main(int argc, const char * argv[]) {
         
         // Create the Person array
         NSMutableArray *personArray = [[NSMutableArray alloc] init];
+    
+        // Initiate new instances of my Student and Professor Objects
+        MDCStudent *studentToAdd = [[MDCStudent  alloc] init];
+        MDCProfessor *professorToAdd = [[MDCProfessor  alloc] init];
         
         // Create a Student
-        Person *studentToAdd = [[Person alloc] initWithPersonData:@"Male" :@"Albert Diaz"];
-        
-        // Add MDC Person Info
-        studentToAdd = [[MDCPerson alloc] initWithMDCPersonData:@"Wolfson" :@"Student"];
-        
-        // Add MDC Student Info
-        studentToAdd = [[MDCStudent alloc] initWithMDCStudentData:@"BA Information Technology" :@"Senior"];
-        
-        // Add MDC Professor Info
-        studentToAdd = [[MDCProfessor alloc] initWithMDCProfessorData:@"N/A" :@"N/A"];
-        
-        //---------
+        [studentToAdd initWithMDCStudentData:@"BA Information Technology" :@"Senior"];
+        [studentToAdd initWithMDCPersonData:@"Wolfson" :@"Student"];
+        [studentToAdd initWithPersonData:@"Male" :@"Albert Diaz"];
         
         // Create a Professor
-        Person *professorToAdd = [[Person alloc] initWithPersonData:@"Female" :@"Sue Prof"];
-        
-        // Add MDC Person Info
-        professorToAdd = [[MDCPerson alloc] initWithMDCPersonData:@"Kendall" :@"Professor"];
-        
-        // Add MDC Student Info
-        professorToAdd = [[MDCStudent alloc] initWithMDCStudentData:@"N/A" :@"N/A"];
-        
-        // Add MDC Professor Info
-        professorToAdd = [[MDCProfessor alloc] initWithMDCProfessorData:@"Computer Science" :@"EnTech"];
+        [professorToAdd initWithMDCProfessorData:@"Computer Science" :@"EnTech"];
+        [professorToAdd initWithMDCPersonData:@"Kendall" :@"Professor"];
+        [professorToAdd initWithPersonData:@"Female" :@"Sue Prof"];
         
         // Add the Persons to the array
         [personArray addObject: studentToAdd];
@@ -50,14 +38,24 @@ int main(int argc, const char * argv[]) {
         
         // Display the Person Object Attributes in the array using a loop
         for (id aPerson in personArray) {
+
+            // Common Attributes
             NSLog(@"Gender: %@" , [aPerson getGender]);
             NSLog(@"Name: %@" , [aPerson getName]);
             NSLog(@"Campus: %@" , [aPerson getCampus]);
             NSLog(@"Role: %@" , [aPerson getRole]);
-            NSLog(@"Specialty: %@" , [aPerson getSpecialty]);
-            NSLog(@"Department: %@" , [aPerson getDepartment]);
-//            NSLog(@"Major: %@" , [aPerson getMajor]);
-//            NSLog(@"Class: %@" , [aPerson getClass]);
+            
+            // Case specific attributes
+            if([[aPerson getRole] isEqualToString: @"Student"])
+            {
+                NSLog(@"Major: %@" , [aPerson getMajor]);
+                NSLog(@"Class: %@" , [aPerson getClass]);
+            }
+            else if([[aPerson getRole] isEqualToString: @"Professor"])
+            {
+                NSLog(@"Specialty: %@" , [aPerson getSpecialty]);
+                NSLog(@"Department: %@" , [aPerson getDepartment]);
+            }
         }
     }
     return 0;
